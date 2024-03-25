@@ -1,5 +1,7 @@
 # Pipeline using Go { Prime Number Generator }
 
+# Check out my [Go Routines Hashnode Blog](https://prayagbhatt.hashnode.dev/go-routines) 
+
 This Go program generates prime numbers using goroutines and channels. It employs a slow pipeline approach to generate prime numbers from random integers.
 
 ## Theory
