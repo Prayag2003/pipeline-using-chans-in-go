@@ -1,7 +1,29 @@
-# Pipeline using Go 
-## Extracting the power of Routines
+# Pipeline using Go { Prime Number Generator }
 
-This Go program generates prime numbers using concurrent goroutines, showcasing a pipeline design with various channels and functions.
+This Go program generates prime numbers using goroutines and channels. It employs a slow pipeline approach to generate prime numbers from random integers.
+
+## Theory
+
+- The program utilizes goroutines and channels to implement a pipeline for generating and filtering prime numbers.
+- It generates random integers, checks whether they are prime, and then sends the prime numbers through the pipeline.
+- The pipeline consists of three main stages: generating random integers, checking primality, and filtering prime numbers.
+
+## Installation and Usage
+
+1. **Install Go:**
+   Ensure you have Go installed on your system. You can download it from [golang.org](https://golang.org/).
+
+2. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/prime-number-generator.git
+   cd prime-number-generator
+   ```
+
+3. **Run the Program:**
+   ```bash
+    go run main.go
+   ```
 
 ## Overview
 
@@ -12,7 +34,7 @@ The code demonstrates a concurrent pipeline to generate prime numbers from rando
 - **`isPrimeStream`**: Determines if a number is a prime number. Note: This function uses a slow method to check for primality.
 - **`fanIn`**: Orchestrates multiple channels into a single channel, aggregating data from different goroutines.
 
-## Code Structure
+## PipeLine Design and Description
 
 ### `repeatFunc`
 
@@ -60,10 +82,6 @@ The code demonstrates a concurrent pipeline to generate prime numbers from rando
 
 3. **Concurrency Control**:
    - The program leverages Go's concurrency model to generate and process prime numbers concurrently. The number of goroutines used can be adjusted based on the available CPU cores (`runtime.NumCPU()`).
-
-## Execution
-
-Run the code via the Go compiler or an IDE to observe the generation of prime numbers and measure the time taken for execution.
 
 ## Notes
 
